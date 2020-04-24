@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ระบบวิเคราะห์ข้อมูลความคิดเห็นที่มีต่อมหาวิทยาลัยเทคโนโลยีพระจอมเกล้า
+		พระนครเหนือจากเว็บไซต์สำหรับวัยรุ่นโดยเฉพาะ
+		</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Bootstrap 3 template for corporate business" />
+<meta name="author" content="http://iweb-studio.com" />
+<!-- css -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="plugins/flexslider/flexslider.css" rel="stylesheet" media="screen" />	
+<link href="css/cubeportfolio.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!--c3 CSS -->
+    <link href="../assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
+<!-- Theme skin -->
+<link id="t-colors" href="skins/default.css" rel="stylesheet" />
+
+	<!-- boxed bg -->
+	<link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+
+
+<div id="wrapper">
+	<!-- start header -->
+	<header>
+			<div class="top">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<ul class="topleft-info">
+								<li><i class=""></i>ระบบวิเคราะห์ข้อมูลความคิดเห็นที่มีต่อมหาวิทยาลัยเทคโนโลยีพระจอมเกล้า
+									พระนครเหนือจากเว็บไซต์สำหรับวัยรุ่นโดยเฉพาะ
+									</li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+						<div id="sb-search" class="sb-search">
+							<form>
+								<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+								<input class="sb-search-submit" type="submit" value="">
+								<span class="sb-icon-search" title="Click to start searching"></span>
+							</form>
+						</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>	
+			
+					
+			<div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="" href="index.html"><img src="img/logo.png" alt="" width="100" height="100" /></a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.php">หน้าหลัก</a></li>
+						<li><a href="index.php#content">ที่มาของระบบ</a></li>
+						<li><a href="index.php#r1">ความสามารถของระบบ</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">แสดงข้อมูล <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+								 <li><a href="table.php">แสดงข้อมูลทั้งหมด</a></li>
+                                <li><a href="#">แสดง Top 10 ความคิดเห็นทางด้านบวก</a></li>
+                                  <li><a href="#">แสดง Top 10 ความคิดเห็นทางด้านลบ</a></li>
+								
+                            </ul>
+						</li>
+						<li><a href="get_data.php">เก็บข้อมูล</a></li>
+						<li><a href="user.php">จัดการสมาชิก</a></li>
+
+                        <li><a href="#">ทีมงาน</a></li>
+                       
+                        <li><a href="processout.php">ออกจากระบบ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+	<!-- end header -->
+	<section id="featured" class="bg">
+	<!-- start slider -->
+  <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                      <br><br><br><br><br>
+                        <ol class="breadcrumb">
+                            <h2 style="color:white">วิเคราะห์หัวข้อกระทู้</h2>
+                        
+                        </ol>
+                         
+                    </div>
+                    
+                </div>
+                
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Sales Chart and browser state-->
+                <!-- ============================================================== -->
+           
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex no-block">
+                                    <div>
+                                        <h5 class="card-title m-b-0">Sales Chart</h5>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <ul class="list-inline text-center font-12">
+                                           
+                                        </ul>
+                                       
+                                    </div>
+                                    <canvas id="myChart" ></canvas>
+                            
+                                </div>
+                               
+    
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js"></script>
+                             
+                                <script>
+                                            // Our labels along the x-axis
+var years = ['มกราคม','กุมภาพันธุ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฏาคม','สิงหาคม','กันยายน','ตุลาคม','พฤษจิกายน','ธันวาคม'];
+// For drawing the lines
+var  n1 = [73,69,114,118,126,172,94,33,39,58,51,51];
+var n2= [12,4,16,14,18,12,11,6,8,15,15,8];
+var n3 = [8,3,9,10,13,10,10,2,1,3,5,4
+];
+
+
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: years,
+    datasets: [
+      { 
+        data: n1,
+        label: "ปกติ",
+        borderColor: "#3e95cd",
+        fill: false
+      },
+      { 
+        data: n2,
+        label: "แง่บวก",
+        borderColor: "#8e5ea2",
+        fill: false
+      },
+      { 
+        data: n3,
+        label: "แง่ลบ",
+        borderColor: "#3cba9f",
+        fill: false
+      }
+      
+    ]
+  }
+});
+                                    </script>    
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex m-b-30 no-block">
+                                    <h5 class="card-title m-b-0 align-self-center">Our Visitors</h5>
+                                    <div class="ml-auto">
+                                        <select class="custom-select b-0">
+                                            <option selected="">Today</option>
+                                            <option value="1">Tomorrow</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="visitor" style="height:260px; width:100%;"></div>
+                                <ul class="list-inline m-t-30 text-center font-12">
+                                    <li><i class="fa fa-circle text-purple"></i> Tablet</li>
+                                    <li><i class="fa fa-circle text-success"></i> Desktops</li>
+                                    <li><i class="fa fa-circle text-info"></i> Mobile</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                <!-- ============================================================== -->
+                <!-- End Sales Chart -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Projects of the Month -->
+                <!-- ============================================================== -->
+               
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+  
+			
+	<!-- start slider -->
+
+
+
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="../assets/node_modules/jquery/jquery.min.js"></script>
+<!-- Bootstrap popper Core JavaScript -->
+<script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
+<script src="../assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="js/perfect-scrollbar.jquery.min.js"></script>
+<!--Wave Effects -->
+<script src="js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="js/sidebarmenu.js"></script>
+<!--Custom JavaScript -->
+<script src="js/custom.min.js"></script>
+<!-- ============================================================== -->
+<!-- This page plugins -->
+<!-- ============================================================== -->
+<!--morris JavaScript -->
+<script src="../assets/node_modules/raphael/raphael-min.js"></script>
+<script src="../assets/node_modules/morrisjs/morris.min.js"></script>
+<!--c3 JavaScript -->
+<script src="../assets/node_modules/d3/d3.min.js"></script>
+<script src="../assets/node_modules/c3-master/c3.min.js"></script>
+<!-- Chart JS -->
+<script src="js/dashboard1.js"></script>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="plugins/flexslider/jquery.flexslider-min.js"></script> 
+<script src="plugins/flexslider/flexslider.config.js"></script>
+<script src="js/jquery.appear.js"></script>
+<script src="js/stellar.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/uisearch.js"></script>
+<script src="js/jquery.cubeportfolio.min.js"></script>
+<script src="js/google-code-prettify/prettify.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+
+	
+</body>
+</html>

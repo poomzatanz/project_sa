@@ -1,0 +1,86 @@
+<?php
+session_start();
+if($_SESSION['pk_member'] == "")
+	{
+		echo "Please Login!";
+		exit();
+	}
+
+	if($_SESSION['status'] != "admin")
+	{
+		echo "This page for User only!";
+		exit();
+	}	
+
+$host="localhost";
+$user="root";
+$password="";
+
+$connect=mysqli_connect($host,$user,$password,"figer");
+mysqli_set_charset($connect,"UTF8");
+if($connect)
+{
+		$sqltext1 = "select*from member where pk_member = ".$_SESSION["pk_member"];
+		$qury1 = mysqli_query($connect,$sqltext1);
+		$result=mysqli_fetch_array($qury1,MYSQLI_ASSOC);
+
+		
+?>
+<!doctype html>
+<link rel="stylesheet" href="01.css">
+
+<table width="800px" align="center">
+	<tr>
+	<td>
+		<ul class="box">
+			<a href="index.php">
+			<button class="button button1">
+			Home
+			</button>
+			</a>
+			<a href="Product.php">
+			<div class="dropdown">
+				<button class="button button1">
+				Product
+				</button>
+				<div class="dropdown-content">
+				</div>
+			</div>
+			</a>
+			<a href="FAQ.php">
+				<button class="button button1">
+				FAQ
+				</button>
+
+				</a>
+			</a>
+			<a href="edituser.php">
+			<button class="button button1">
+			Admin
+			</button>
+			</a>
+		</ul>
+		<div class="a8" >
+		Wellcome 
+				<?php
+				echo " ".$result['name']."	";
+				?>
+				 <a href="proccesslogout.php">
+           Logout
+		 </a>
+				</div>
+			
+        
+	</td>
+	</tr>
+
+	<tr>
+	<td>
+		<img src="pic/01.png" width="1000px">
+	</td>
+	</tr>
+  </table>
+  <?php
+}
+?>
+  </html>
